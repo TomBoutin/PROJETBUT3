@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <style>
-    .header { font: 18px/1.5 sans-serif; list-style: none; }
+    .header { font: 18px/1.5 sans-serif; list-style: none; display: flex; gap: 2rem;}
     .footer { font: 18px/1.5 sans-serif; list-style: none; }
 </style>
 <html>
@@ -17,11 +17,13 @@
     <body class="background-color: #74992e">
         <ul class="header">
             <li><a href="{{ path('app_index') }}">Home</a></li>
-            <li><a href="{{ path('app_about') }}">About</a></li>
             <li><a href="{{ path('app_login') }}">Login</a></li>
             <li><a href="{{ path('app_logout') }}">Logout</a></li>
             <li><a href="{{ path('app_register') }}">Register</a></li>
+            <li><a href="{{ path('app_gestion') }}">Gestion</a></li>
+            <li><a href="{{ path('app_admin') }}">Admin</a></li>
         </ul>
+
         {% if app.user %}
             <p>Connecté en tant que {{ app.user.email }}</p>
         {% endif %}
